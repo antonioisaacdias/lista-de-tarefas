@@ -56,7 +56,7 @@ const LIST_LOCAL = {
     
 };
 
-form.addEventListener("submit", (event) => {
+document.querySelector("form button").addEventListener("click", (event) => {
     event.preventDefault();
     if (newItem.value.trim() === "") {
         alertBox.style.display = "flex";
