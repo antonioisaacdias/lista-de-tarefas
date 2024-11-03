@@ -10,6 +10,10 @@ li {
         margin-left: .75rem;
     }
 
+    &:has(:checked) p {
+        text-decoration: line-through;
+    }
+
     .check-wrapper {
         display: flex;
         height: 1rem;
