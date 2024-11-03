@@ -61,7 +61,6 @@ form.addEventListener("submit", (event) => {
     if (newItem.value == "") {
         alertBox.style.display = "flex";
     } else {
-        event.preventDefault();
         LIST_LOCAL.refreshItems();
         createItemList(newItem.value);
         LIST_LOCAL.addItem(newItem.value);
