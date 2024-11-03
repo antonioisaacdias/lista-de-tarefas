@@ -1,0 +1,30 @@
+.warning-wrapper {
+    display: flex;
+    margin-top: 2.25rem;
+    align-items: center;
+    background-color: var(--color-danger);
+    padding: .75rem;
+    border-radius: .75rem;
+    color: white;
+
+    img {
+        width: 1.25rem;
+    }
+
+    p {
+        margin-left: .5rem;
+    }
+
+    button {
+        all:unset;
+        margin-inline: auto 0.27rem;
+        width: .75rem;
+        height: .75rem;
+        background-image: url(../assets/icons/close-default.svg);
+        background-size: cover;
+
+        &:hover {
+            background-image: url(../assets/icons/close-hover.svg);
+        }
+    }
+}

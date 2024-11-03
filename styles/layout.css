@@ -1,0 +1,43 @@
+main > img {
+    width: 9.7193rem;
+    justify-self: center;
+    margin-block: 1.5625rem 3.875rem;
+}
+
+a {
+    display: flex;
+    gap: .25rem;
+    align-items: center;
+    text-decoration: none;
+    font: var(--text-link);
+    color: var(--color-brand);
+    margin-bottom: 1rem;
+
+    span {
+        background-image: url(../assets/icons/link\ button.svg);
+        background-repeat: no-repeat;
+        height: .75rem;
+        width: .75rem;
+    }
+}
+
+h1 {
+    font: var(--text-title);
+    margin-bottom: 2.75rem;
+}
+
+form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+ul {
+    width: 100%;
+    display: grid;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    gap: .75rem;
+}
+

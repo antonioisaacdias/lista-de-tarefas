@@ -1,0 +1,63 @@
+li {
+    height: 3.0625rem;
+    border-radius: .75rem;
+    background-color: var(--background-secondary);
+    display: flex;
+    align-items: center;
+    padding: .5rem .75rem;
+
+    p {
+        margin-left: .75rem;
+    }
+
+    .check-wrapper {
+        display: flex;
+        height: 1rem;
+        width: 1rem;
+        position: relative;
+
+        input {
+            position: absolute;
+            opacity: 0;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .check-image {
+            background-image: url(../assets/icons/state=Default.svg);
+            flex: 0 0 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &:hover, &:focus-within {
+            .check-image {
+                background-image: url(../assets/icons/state=hover.svg);
+            }
+        }
+
+        &:has(:checked) .check-image {
+            background-image: url(../assets/icons/state=selected.svg);
+        }
+    }
+
+    .btn-wrapper {
+        margin: 8px;
+        margin-left: auto;
+        height: 1rem;
+        width: 1rem;
+        position: relative;
+        button {
+            all: unset;
+            position: absolute;
+            inset: 0;
+            background-image: url(../assets/icons/trash.svg);
+            background-size: cover;
+
+            &:hover {
+                background-image: url(../assets/icons/trash-hover.svg);
+            }
+        }
+    }
+}

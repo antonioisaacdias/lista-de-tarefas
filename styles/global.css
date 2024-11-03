@@ -25,3 +25,37 @@
 
 
 }
+
+@media (max-width: 40rem) {
+    body {
+        padding-inline: 2rem;
+    }
+    main {
+        margin-top: 2.125rem;
+        & > img {
+            display: none;
+        }
+        form {
+            display: grid;
+            button {
+                height: 2.75rem;
+            }
+        }
+    }
+}
+
+body {
+    background-color: var(--background-primary);
+    font: var(--text-paragraph);
+    color: var(--content-primary);
+
+    display: flex;
+}
+
+main {
+    margin-inline: auto;
+    display: grid;
+    flex-grow: 1;
+    max-width: 40rem;
+}
+
