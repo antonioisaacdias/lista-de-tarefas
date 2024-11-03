@@ -41,6 +41,9 @@
                 height: 2.75rem;
             }
         }
+        .warning-wrapper {
+            font-size: .75rem;
+        }
     }
 }
 
