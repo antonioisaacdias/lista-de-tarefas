@@ -28,9 +28,9 @@
 
 @media (max-width: 40rem) {
     body {
-        padding-inline: 2rem;
     }
     main {
+        padding-inline: 2rem;
         margin-top: 2.125rem;
         & > img {
             display: none;
@@ -53,6 +53,7 @@ body {
     color: var(--content-primary);
 
     display: flex;
+    position: relative;
 }
 
 main {
