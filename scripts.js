@@ -58,14 +58,15 @@ const LIST_LOCAL = {
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
-    if (newItem.value == "") {
+    if (newItem.value.trim() === "") {
         alertBox.style.display = "flex";
     } else {
         LIST_LOCAL.refreshItems();
         createItemList(newItem.value);
         LIST_LOCAL.addItem(newItem.value);
         LIST_LOCAL.showItems();
-        newItem.value = ""; 
+        newItem.value = "";
+        alertBox.style.display = "none";
     }
 });
 
