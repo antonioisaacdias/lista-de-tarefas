@@ -42,22 +42,18 @@ li {
         }
     }
 
-    .btn-wrapper {
+    button {
+        all: unset;
         margin: 8px;
         margin-left: auto;
         height: 1rem;
         width: 1rem;
         position: relative;
-        button {
-            all: unset;
-            position: absolute;
-            inset: 0;
-            background-image: url(../assets/icons/trash.svg);
-            background-size: cover;
-
-            &:hover {
+        background-image: url(../assets/icons/trash.svg);
+        background-size: cover;
+        &:hover {
                 background-image: url(../assets/icons/trash-hover.svg);
-            }
+            
         }
     }
 }

@@ -1,5 +1,5 @@
 .warning-wrapper {
-    display: flex;
+    display: none;
     margin-top: 2.25rem;
     align-items: center;
     background-color: var(--color-danger);
