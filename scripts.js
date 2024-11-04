@@ -7,24 +7,30 @@ const alertBox = document.querySelector(".alert");
 const alertBoxBtnClose = document.querySelector(".alert-box button")
 
 document.addEventListener("DOMContentLoaded", function(){
-    LIST_LOCAL.refreshItems();
-    LIST_LOCAL.showItems();
+    if (localStorage.getItem("listLocal") == null) {
+        console.log("Não foi encontrada lista no localStorare, criando referência...")
+        localStorage.setItem("listLocal", JSON.stringify(LIST_LOCAL))
+    } else {
+        LIST_LOCAL.refreshItems();
+        LIST_LOCAL.showItems();
+        LIST_LOCAL.items.forEach(function(item){
+            createItemList(item);
+        })
+    }
 
-    LIST_LOCAL.items.forEach(function(item){
-        createItemList(item);
-    })
+
 });
 
 const LIST_LOCAL = {
-    _name: "listLocal",
-    _items: [],
+    name: "listLocal",
+    items: [],
 
     getName () {
         return this.name;
     },
 
     get Items() {
-        return this._items;
+        return this.items;
     },
 
     showItems () {
@@ -56,12 +62,11 @@ const LIST_LOCAL = {
     
 };
 
-document.querySelector("form button").addEventListener("click", (event) => {
+form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (newItem.value.trim() === "") {
         alertBox.style.display = "flex";
     } else {
-        LIST_LOCAL.refreshItems();
         createItemList(newItem.value);
         LIST_LOCAL.addItem(newItem.value);
         LIST_LOCAL.showItems();
@@ -101,9 +106,3 @@ function removeItemList (event) {
     LIST_LOCAL.removeItem(event.target.previousElementSibling.textContent);
     LIST_LOCAL.showItems();
 };
-
-
-
-
-
-
