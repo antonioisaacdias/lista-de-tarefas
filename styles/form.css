@@ -21,5 +21,10 @@ form {
         background-color: var(--color-brand);
         color: white;
         font: var(--text-label);
+
+        &:hover {
+            background-color: var(--color-brand-hover);
+            outline: solid 2px var(--color-brand-hover);
+        }
     }
 }

@@ -99,7 +99,6 @@ export class GUI {
         }
     }
 
-
     rememberSavedTasks () {
         const storageTasks = this.#storage.fetchItems()
         storageTasks.forEach(element => {
