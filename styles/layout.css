@@ -15,6 +15,7 @@ a {
 
     span {
         background-image: url(../assets/icons/link\ button.svg);
+        background-size: contain;
         background-repeat: no-repeat;
         height: .75rem;
         width: .75rem;

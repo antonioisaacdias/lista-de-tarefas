@@ -7,8 +7,8 @@
 :root {
     --background-primary: #F4F5FB;
     --background-secondary: #FFFFFF;
-    --color-brand: #CA3884;
-    --color-brand-hover: #A52C6B;
+    --color-brand: #1b58c9;
+    --color-brand-hover: #174cad;
     --color-danger: #C93847;
     --content-primary: #080B12;
     --content-secondary: #374151;
@@ -59,5 +59,22 @@ main {
     display: grid;
     flex-grow: 1;
     max-width: 40rem;
+}
+
+.logo {
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    img {
+        height: 80px;
+        width: 80px;
+    }
+
+    p {
+        font: 700 2.5rem/140% var(--font-family);
+        color: var(--content-primary);
+    }
 }
 
